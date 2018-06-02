@@ -7,149 +7,14 @@
     <title>Diplomacy Web Beta</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
     <script src="js/jquery.wikiblurb.js" type="text/javascript"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- <script src="//maps.googleapis.com/maps/api/js"></script> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmjjM30M0qaN4QMPRiTpqkoLIAYD8kGOg"></script>
-    <script src="//scribblemaps.com/api/js/"></script>
+    <!--<script src="//scribblemaps.com/api/js/"></script> -->
     <script src="js/App.js" type="text/javascript"></script>
-
-    <script>
-        window.scribblemaps = {
-            settings:
-                {
-                    "baseAPI": "google",
-                    "key": "AIzaSyCmjjM30M0qaN4QMPRiTpqkoLIAYD8kGOg"
-                }
-        }
-    </script>
-    <script>
-
-
-    window.onload = function() {
-       var sm = new ScribbleMap(document.getElementById('middlepane'));
-
-       //set up the style variable based on google maps
-       var myStyle = [
-
-         {
-             "elementType": "geometry",
-             "stylers": [
-               {
-                 "color": "#ebe3cd"
-               }
-             ]
-           },
-           {
-             "elementType": "labels.text.fill",
-             "stylers": [
-               {
-                 "color": "#523735"
-               }
-             ]
-           },
-           {
-             "elementType": "labels",
-             "stylers": [
-               {
-                 visibility: "off"
-               }
-             ]
-           },
-           {
-             "featureType": "water",
-             "elementType": "geometry.fill",
-             "stylers": [
-               {
-                 "color": "#b9d3c2"
-               }
-             ]
-           },
-           {
-             "featureType": "water",
-             "elementType": "labels.text.fill",
-             "stylers": [
-               {
-                 "color": "#92998d"
-               }
-             ]
-           },
-           {
-           featureType: "administrative",
-           stylers: [
-             { visibility: "off" }
-           ]
-         },
-      {
-    featureType: "poi",
-    stylers: [
-    { visibility: "off" }
-    ]
-    },
-    {
-    featureType: "road",
-    stylers: [
-    { visibility: "off" }
-    ]
-    },
-    {
-    "featureType": "landscape.natural",
-    "elementType": "geometry",
-    "stylers": [
-    {
-      "color": "#dfd2ae"
-    }
-    ]
-    },
-    ];
-
-       var mapOptions = {
-         mapTypeId: google.maps.MapTypeId.TERRAIN,
-         styles: myStyle
-       };
-
-       //sm.getBaseAPIMap().setMapTypeId(google.maps.MapTypeId.TERRAIN);
-
-       //set the map properties by getting them from getbaseAPImap
-       sm.getBaseAPIMap().setOptions(mapOptions);
-
-       //set all the display options
-    sm.view.setCenter([36.33444,  43.1409]);
-    sm.view.setZoom(6);
-    sm.ui.setAvailableTools([]);
-    sm.ui.styleControl(scribblemaps.ControlType.SEARCH,{"display":"none"});
-    sm.ui.styleControl(scribblemaps.ControlType.LINE_SETTINGS,{"display":"none"});
-    sm.ui.styleControl(scribblemaps.ControlType.LINE_COLOR,{"display":"none"});
-    sm.ui.styleControl(scribblemaps.ControlType.FILL_COLOR,{"display":"none"});
-    sm.ui.styleControl(scribblemaps.ControlType.TOOLBOX,{"display":"none"});
-    sm.ui.styleControl(scribblemaps.ControlType.ZOOM,{"display":"none"});
-    sm.ui.styleControl(scribblemaps.ControlType.MAP_TYPE,{"display":"none"});
-
-      /* Set the Andy Roo base Polygon.*/
-      sm.draw.label([31.493091, 21.643066], "Kingdom of Fahaz");
-
-      sm.draw.poly([
-        [31.930894, 19.929199],
-        [32.756964, 21.038818],
-        [32.775440, 21.412354],
-        [32.942852, 21.703491],
-        [32.642700, 23.071289],
-        [32.443581, 23.156433],
-        [32.341536, 23.079529],
-        [32.174305, 23.425598],
-        [30.237417, 24.450073],
-        [30.332287, 19.462280],
-        [30.701401, 19.923706],
-        [31.116149, 20.165405],
-        [31.781590, 19.901733],
-      ], {
-          "fillOpacity": 0.5,
-          "fillColor": "#3399ff",
-          "lineColor": "#000000"
-      });
-     }
-
-    </script>
 
 </head>
 
@@ -158,18 +23,25 @@
 <!-- <div id="otherWikiArticle"></div> -->
 <div class="container-fluid">
   <div id="otherWikiArticle" class="leftpane"></div>
-  <div class="middlepane">Test Page</div>
-  <div id="otherWikiArticle2" class="rightpane"></div>
+  <div id="map" class="middlepane"></div>
+  <div class="lowermiddlepane">
+    <div class="list-group" style="max-height: 100%; overflow: auto;">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">This is a danger list group item <i class="far fa-frown"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item <i class="far fa-smile"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning">This is a warning list group item <i class="far fa-meh"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning">This is a warning list group item <i class="far fa-meh"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">This is a danger list group item <i class="far fa-frown"></i></a>
+
 </div>
 
-
-
-
+  </div>
+  <div id="otherWikiArticle2" class="rightpane"></div>
+</div>
 
 <script type="text/javascript">
 
 $(document).ready(function(){
-
+//$('#exampleModalCenter').modal('show');
     //$('#article').wikiblurb();
 
     $('#otherWikiArticle').wikiblurb({
@@ -195,6 +67,7 @@ $(document).ready(function(){
         customSelector: '',
         callback: function() {
             console.log('Data Loaded...');
+            setMapAddress( "mosul, iraq" );
         }
     });
 
@@ -203,7 +76,25 @@ $(document).ready(function(){
 </script>
 
 
-
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 </body>

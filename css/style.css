@@ -30,10 +30,21 @@ body, html {
     position: absolute;
     left: 20%;
     width: 60%;
-    height: 100%;
+    height: 60%;
     float: left;
     background-color: whitesmoke;
     border-collapse: collapse;
+}
+.lowermiddlepane {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    top: 60%;
+    height: 40%;
+    float: left;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+    text-align: center;
 }
 
 .rightpane {
