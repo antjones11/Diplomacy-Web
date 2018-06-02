@@ -1,0 +1,61 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.infobox{
+  background: lightgray;
+  width: 100%;
+  display: contents;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.leftpane {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: lightgray;
+    border-collapse: collapse;
+    overflow: auto;
+}
+
+.middlepane {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 100%;
+    float: left;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+}
+
+.rightpane {
+  width: 20%;
+  height: 100%;
+  /* position: relative; */
+  position: absolute;
+  left: 80%;
+  float: right;
+  background-color: lightgray;
+  border-collapse: collapse;
+  overflow: auto;
+}
+
+.toppane {
+  width: 100%;
+  height: 100px;
+  border-collapse: collapse;
+  background-color: #4da6ff;
+}
+
+.container-fluid{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
