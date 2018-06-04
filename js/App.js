@@ -87,3 +87,24 @@ function setMapAddress(address) {
     }
   });
 }
+
+function changeNation(nation) {
+  var x = nation.text;
+  console.log(x);
+
+  $('#otherWikiArticle2').empty()
+
+  $('#otherWikiArticle2').wikiblurb({
+      wikiURL: "https://micronations.wiki",
+      apiPath: '',
+      section: 0,
+      page: x,
+      removeLinks: true,
+      type: 'infobox',
+      customSelector: '',
+      callback: function() {
+          console.log('Data Loaded...');
+          setMapAddress( "mosul, iraq" );
+      }
+  });
+}
