@@ -1,3 +1,5 @@
+//TODO restrict movement around the selected area https://stackoverflow.com/questions/3818016/google-maps-v3-limit-viewable-area-and-zoom-level
+
 function setMapAddress(address) {
 
   var geocoder = new google.maps.Geocoder();
@@ -38,6 +40,8 @@ function setMapAddress(address) {
         },
         center: location,
         zoom: 10,
+        maxZoom:10,
+        minZoom:10,
         disableDefaultUI: true,
         streetViewControl: true,
         mapTypeId: 'Styled'
