@@ -1,1 +1,1 @@
-Web version of Diplomacy game
+Web version of Diplomacy game.
