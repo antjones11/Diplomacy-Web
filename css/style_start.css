@@ -22,6 +22,10 @@ background-position: center;
  	margin:50px 15px;
 }
 
+.container {
+  max-width: 60%;
+}
+
 h1.title {
 	font-size: 50px;
 	font-family: 'Passion One', cursive;
