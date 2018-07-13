@@ -70,3 +70,29 @@ body, html {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
+
+.nation-actions{
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: blue;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
+
+#pnlNationActions{
+    background-color: #C5C9B8;
+    width: 100%;
+    color: #333333;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    float: none;
+}
