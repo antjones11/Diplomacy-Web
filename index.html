@@ -21,12 +21,31 @@
 
 <body>
 
+  <div id="pnlNationActions" > <!--style="display:none;"-->
+      <div class="col-sm-10 form-group-lg" style="margin-left: auto;margin-right: auto;">
+        <center><h4 style="margin-top:10px;">Diplomatic Actions</h4></center>
+        <!-- <center><h5 style="margin-top:10px;">Make Offer <i class="fa fa-arrow-alt-circle-right"></i></h5></center> -->
+              <div class="btn-group" data-toggle="buttons" style="display: grid;">
+                  <label class="btn btn-block">Open Embassy</label>
+                  <label class="btn btn-block disabled">Regions</label>
+                  <label class="btn btn-block disabled">Request Trade Agreement</label>
+                  <label class="btn btn-block disabled">Give/Request Resources</label>
+              </div>
+          <!-- <button class="btn btn-outline-success" id="saveTestBtn" onclick="saveTest()" type="submit">
+              Save Test
+          </button> -->
+      </div>
+  </div>
+
 <!-- <div id="otherWikiArticle"></div> -->
 <div class="container-fluid">
   <div id="otherWikiArticle" class="leftpane"></div>
-  <div id="map" class="middlepane"></div>
+
+  <div id="map" class="middlepane">
+  </div>
+
   <div class="lowermiddlepane">
-    <div class="list-group" style="max-height: 100%; overflow: auto;">
+  <div class="list-group" style="max-height: 100%; overflow: auto;">
   <a href="#" class="list-group-item list-group-item-action list-group-item-danger" onclick="changeNation(this)">Republic of Shurigawa <i class="far fa-frown"></i></a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-success" onclick="changeNation(this)">Socialist Republic of Zhenul <i class="far fa-smile"></i></a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-warning" onclick="changeNation(this)">Principality of Dragovania <i class="far fa-meh"></i></a>
@@ -103,29 +122,6 @@ $(document).ready(function(){
       </div>
     </div>
   </div>
-</div>
-
-<div id="pnlNationActions">
-    <div class="col-sm-10 form-group-lg">
-        <form class="form-group">
-            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn btn-success active">
-                    <input type="radio" autocomplete="off" checked> Add question
-                </label>
-                <label class="btn btn-success">
-                    <input type="radio" name="options" id="inlineRadio1" value="openQuestionModule()"
-                           autocomplete="off">Question with a open answer </label>
-                <label class="btn btn-success">
-                    <input type="radio" name="options" id="inlineRadio2" value="singleQuestionModule()"
-                           autocomplete="off">
-                    Question with only one right answer
-                </label>
-            </div>
-        </form>
-        <button class="btn btn-outline-success" id="saveTestBtn" onclick="saveTest()" type="submit">
-            Save Test
-        </button>
-    </div>
 </div>
 
 </body>
