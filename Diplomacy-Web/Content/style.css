@@ -1,0 +1,99 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Ruluko';
+}
+
+.infobox{
+  background: lightgray;
+  width: 100%;
+  display: contents;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.leftpane {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: lightgray;
+    border-collapse: collapse;
+    overflow: auto;
+}
+
+.middlepane {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    float: left;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+}
+.lowermiddlepane {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    top: 60%;
+    height: 40%;
+    float: left;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.rightpane {
+  width: 20%;
+  height: 100%;
+  /* position: relative; */
+  position: absolute;
+  left: 80%;
+  float: right;
+  background-color: lightgray;
+  border-collapse: collapse;
+  overflow: auto;
+}
+
+.toppane {
+  width: 100%;
+  height: 100px;
+  border-collapse: collapse;
+  background-color: #4da6ff;
+}
+
+.container-fluid{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.nation-actions{
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: blue;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
+
+#pnlNationActions{
+    background-color: #C5C9B8;
+    z-index: 3;
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    height: 50%;
+    top: 5%;
+    overflow: auto;
+}
+
+.btn-block{
+    height: 10px;
+}

@@ -2,6 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <link rel="stylesheet" type="text/css" href="Content/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Ruluko' rel='stylesheet'>
     <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css' rel='stylesheet' />
@@ -10,11 +12,54 @@
 
     <%--<script type="text/javascript" src="https://rawgit.com/henrythasler/Leaflet.Geodesic/master/Leaflet.Geodesic.min.js"></script>--%>
 
-    <div id="mapid" style="height:100%;width:100%;position:fixed; left:0;"></div>
+    <%--<div id="mapid" style="height:100%;width:100%;position:fixed; left:0;"></div>--%>
+
+    <div id="pnlNationActions" > <!--style="display:none;"-->
+      <div class="col-sm-10 form-group-lg" style="margin-left: auto;margin-right: auto;">
+        <center><h4 style="margin-top:10px;">Diplomatic Actions</h4></center>
+        <!-- <center><h5 style="margin-top:10px;">Make Offer <i class="fa fa-arrow-alt-circle-right"></i></h5></center> -->
+              <div class="btn-group" data-toggle="buttons" style="display: grid;">
+                  <label class="btn btn-block">Open Embassy</label>
+                  <label class="btn btn-block disabled">Regions</label>
+                  <label class="btn btn-block disabled">Request Trade Agreement</label>
+                  <label class="btn btn-block disabled">Give/Request Resources</label>
+              </div>
+          <!-- <button class="btn btn-outline-success" id="saveTestBtn" onclick="saveTest()" type="submit">
+              Save Test
+          </button> -->
+      </div>
+    </div>
+
+<!-- <div id="otherWikiArticle"></div> -->
+<div class="container-fluid">
+  <div id="otherWikiArticle" class="leftpane"></div>
+
+  <div id="map" class="middlepane">
+  </div>
+
+  <div class="lowermiddlepane">
+  <div class="list-group" style="max-height: 100%; overflow: auto;">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger" onclick="changeNation(this)">Republic of Shurigawa <i class="far fa-frown"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success" onclick="changeNation(this)">Socialist Republic of Zhenul <i class="far fa-smile"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning" onclick="changeNation(this)">Principality of Dragovania <i class="far fa-meh"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning" onclick="changeNation(this)">Kingdom of Gardeland <i class="far fa-meh"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger" onclick="changeNation(this)">Kingdom of Sabia and Verona <i class="far fa-frown"></i></a>
+
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger" onclick="changeNation(this)">Republic of Shurigawa <i class="far fa-frown"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success" onclick="changeNation(this)">Socialist Republic of Zhenul <i class="far fa-smile"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning" onclick="changeNation(this)">Principality of Dragovania <i class="far fa-meh"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning" onclick="changeNation(this)">Kingdom of Gardeland <i class="far fa-meh"></i></a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger" onclick="changeNation(this)">Kingdom of Sabia and Verona <i class="far fa-frown"></i></a>
+</div>
+
+  </div>
+  <div id="otherWikiArticle2" class="rightpane"></div>
+</div>
+
 
     <script>
 
-var mapLayer = L.map('mapid', {
+var mapLayer = L.map('map', {
   zoomAnimation: false,
   maxZoom: 10,
   minZoom: 8
@@ -181,5 +226,6 @@ mapLayer.setView([52.3, 4.7], 9);
 
 
     </script>
+
 
 </asp:Content>

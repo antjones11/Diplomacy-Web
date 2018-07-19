@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Website CSS style -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/83ccb09681.js"></script>
+    <script src="Scripts/Start.js"></script>
+		<!-- Website Font style -->
+
+		<link rel="stylesheet" href="Content/style_start.css">
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+		<title>Admin</title>
+	</head>
+	<body>
+
+    <div class="container">
+        <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-1" type="button" class="btn btn-success btn-circle"><i class="fa fa-info" aria-hidden="true"></i></a>
+                    <p><small>Core Info</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-university" aria-hidden="true"></i></a>
+                    <p><small>Government</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-gavel" aria-hidden="true"></i></a>
+                    <p><small>Policies</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-industry" aria-hidden="true"></i></a>
+                    <p><small>Resources</small></p>
+                </div>
+            </div>
+        </div>
+
+        <form role="form">
+            <div class="panel panel-primary setup-content" id="step-1">
+                <div class="panel-heading">
+                     <h3 class="panel-title">Core Nation Information</h3>
+                </div>
+                <div class="panel-body">
+                  <div class="form-group">
+      							<label for="name" class="cols-sm-2 control-label">Nation Name</label>
+      							<div class="cols-sm-10">
+      								<div class="input-group">
+      									<span class="input-group-addon"><i class="fa fa-flag" aria-hidden="true"></i></span>
+      									<input maxlength="200" type="text" required="required" class="form-control" placeholder="Republic Of Dragovania" name="name" id="name"/>
+      								</div>
+      							</div>
+      						</div>
+                  <div class="form-group">
+      							<label for="language" class="cols-sm-2 control-label">Official Language</label>
+      							<div class="cols-sm-10">
+      								<div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-language fa" aria-hidden="true"></i></span>
+                        <select class="form-control" id="ddLanguage">
+                          <option>English</option>
+                          <option>French</option>
+                          <option>Spanish</option>
+                          <option>German</option>
+                        </select>
+      								</div>
+      							</div>
+      						</div>
+                  <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Official Religion</label>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <select class="form-control" id="ddReligion">
+                          <option>Christianity</option>
+                          <option>Islam</option>
+                          <option>Buddhism</option>
+                          <option>Hindu</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="currency" class="cols-sm-2 control-label">Currency</label>
+                    <div class="cols-sm-10">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></span>
+                        <select class="form-control" id="ddCurrency">
+                          <option>Dollar</option>
+                          <option>Pound</option>
+                          <option>Euro</option>
+                          <option>Shekel</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                </div>
+            </div>
+
+            <div class="panel panel-primary setup-content" id="step-2">
+                <div class="panel-heading">
+                     <h3 class="panel-title">Government Details</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                      <label for="currency" class="cols-sm-2 control-label">Government Type</label>
+                      <div class="cols-sm-10">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-first-order" aria-hidden="true"></i></span>
+                          <select class="form-control" id="ddGovtType">
+                            <option>Anarchy</option>
+                            <option>Capitalist</option>
+                            <option>Communist</option>
+                            <option>Democracy</option>
+                            <option>Dictatorship</option>
+                            <option>Federal Government</option>
+                            <option>Monarchy</option>
+                            <option>Republic</option>
+                            <option>Revolutionary Government</option>
+                            <option>Totalitarian State</option>
+                            <option>Transitional</option>
+                          </select>
+                        </div>
+                        <br/><p id="lblGovtTypeExplanation" style="color:whitesmoke;">A complete lack of government that usually results in a state of lawlessness and disorder.</p>
+                      </div>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label class="control-label">Company Address</label>
+                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address" />
+                    </div> -->
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                </div>
+            </div>
+
+            <div class="panel panel-primary setup-content" id="step-3">
+                <div class="panel-heading">
+                     <h3 class="panel-title">Policy Details</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Company Name</label>
+                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Company Address</label>
+                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address" />
+                    </div>
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                </div>
+            </div>
+
+            <div class="panel panel-primary setup-content" id="step-4">
+                <div class="panel-heading">
+                     <h3 class="panel-title">Resource Details</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Company Name</label>
+                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Company Address</label>
+                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address" />
+                    </div>
+                    <button class="btn btn-success pull-right" type="submit">Finish!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="main-login main-center" style="margin-top:20px">
+      <label id="lblTraitLanguage" class="cols-sm-2 control-label">- Example Language trait based on user selection</label>
+      <label id="lblTraitReligion" class="cols-sm-2 control-label">- Example Religion trait based on user selection</label>
+      <label id="lblTraitCurrency" class="cols-sm-2 control-label">- Example Currency trait based on user selection</label>
+
+    </div>
+
+
+		<!-- <div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<center><h5>Core nation information</h5></center>
+					<form class="" method="post" action="#">
+
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Nation Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-flag" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="name" id="name"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="language" class="cols-sm-2 control-label">Official Language</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-language fa" aria-hidden="true"></i></span>
+                  <select class="form-control" id="sel1">
+                    <option>English</option>
+                    <option>French</option>
+                    <option>Spanish</option>
+                    <option>German</option>
+                  </select>
+								</div>
+							</div>
+						</div>
+
+            <div class="form-group">
+              <label for="confirm" class="cols-sm-2 control-label">Official Religion</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                  <select class="form-control" id="sel1">
+                    <option>Christianity</option>
+                    <option>Islam</option>
+                    <option>Buddhist</option>
+                    <option>German</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+						<div class="form-group">
+							<label for="currency" class="cols-sm-2 control-label">Currency</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Next</a>
+						</div>
+
+					</form>
+				</div>
+			</div>
+        <div class="main-login main-center" style="margin-top:20px">
+          <label id="lblTraitLanguage" class="cols-sm-2 control-label">- Example Language trait based on user selection</label>
+          <label id="lblTraitReligion" class="cols-sm-2 control-label">- Example Religion trait based on user selection</label>
+          <label id="lblTraitCurrency" class="cols-sm-2 control-label">- Example Currency trait based on user selection</label>
+
+        </div>
+		</div> -->
+	</body>
+</html>
